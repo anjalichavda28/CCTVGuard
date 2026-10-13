@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CCTVGuard - Cameras</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+
+        <h2>CCTVGuard</h2>
+
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="cameras.html">Cameras</a>
+            <a href="alerts.html">Alerts</a>
+            <a href="activity.html">Activity</a>
+            <a href="settings.html">Settings</a>
+        </div>
+
+    </nav>
+</header>
+
+<main class="page-container">
+
+    <h1>📹 CCTV Cameras</h1>
+
+    <p>Monitor all connected cameras.</p>
+
+    <input
+        type="text"
+        id="cameraSearch"
+        class="search-box"
+        placeholder="Search camera..."
+    >
+
+    <div class="camera-grid" id="cameraList">
+
+        <div class="camera-card">
+            <div class="camera-screen">📹 Camera 01</div>
+
+            <h3>Entrance Camera</h3>
+
+            <p class="online-text">● Online</p>
+
+            <button
+                class="btn"
+                onclick="viewCamera('Entrance Camera')">
+                View Camera
+            </button>
+        </div>
+
+        <div class="camera-card">
+            <div class="camera-screen">📹 Camera 02</div>
+
+            <h3>Parking Camera</h3>
+
+            <p class="online-text">● Online</p>
+
+            <button
+                class="btn"
+                onclick="viewCamera('Parking Camera')">
+                View Camera
+            </button>
+        </div>
+
+        <div class="camera-card">
+            <div class="camera-screen">📹 Camera 03</div>
+
+            <h3>Office Camera</h3>
+
+            <p class="offline-text">● Offline</p>
+
+            <button
+                class="btn"
+                onclick="viewCamera('Office Camera')">
+                View Camera
+            </button>
+        </div>
+
+        <div class="camera-card">
+            <div class="camera-screen">📹 Camera 04</div>
+
+            <h3>Reception Camera</h3>
+
+            <p class="online-text">● Online</p>
+
+            <button
+                class="btn"
+                onclick="viewCamera('Reception Camera')">
+                View Camera
+            </button>
+        </div>
+
+    </div>
+
+</main>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
