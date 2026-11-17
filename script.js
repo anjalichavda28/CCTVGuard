@@ -1,165 +1,156 @@
-// Login
 
-const loginForm =
-    document.getElementById("loginForm");
+// ===================================
+// 1. LOGIN FUNCTION
+// ===================================
 
-if (loginForm) {
+function loginUser(event) {
 
-    loginForm.addEventListener(
-        "submit",
-        function(event) {
+    event.preventDefault();
 
-            event.preventDefault();
+    const email = document.getElementById("email").value.trim();
 
-            const email =
-                document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-            const password =
-                document.getElementById("password").value;
+    const message = document.getElementById("loginMessage");
 
-            if (
-                email === "admin@gmail.com" &&
-                password === "admin123"
-            ) {
 
-                alert("Login Successful!");
+    if (email === "admin@gmail.com" && password === "admin123") {
 
-                window.location.href =
-                    "dashboard.html";
+        message.textContent = "Login Successful!";
 
-            } else {
+        message.style.color = "green";
 
-                alert(
-                    "Invalid Email or Password!"
-                );
+        window.location.href = "dashboard.html";
 
-            }
+    }
 
-        }
-    );
+    else {
+
+        message.textContent = "Invalid Email or Password!";
+
+        message.style.color = "red";
+
+    }
 
 }
 
 
-// Camera Search
+// ===================================
+// 2. CAMERA SEARCH FUNCTION
+// ===================================
 
-const cameraSearch =
-    document.getElementById("cameraSearch");
+function filterCameras() {
 
-if (cameraSearch) {
+    const search = document
+        .getElementById("cameraSearch")
+        .value.toLowerCase();
 
-    cameraSearch.addEventListener(
-        "keyup",
-        function() {
+    const cards = document.querySelectorAll(".searchable");
 
-            const searchValue =
-                cameraSearch.value.toLowerCase();
+    let count = 0;
 
-            const cameras =
-                document.querySelectorAll(
-                    ".camera-card"
-                );
 
-            cameras.forEach(function(camera) {
+    cards.forEach(function(card) {
 
-                const text =
-                    camera.innerText.toLowerCase();
+        const cameraName = card.innerText.toLowerCase();
 
-                if (
-                    text.includes(searchValue)
-                ) {
+        if (cameraName.includes(search)) {
 
-                    camera.style.display =
-                        "block";
+            card.style.display = "";
 
-                } else {
-
-                    camera.style.display =
-                        "none";
-
-                }
-
-            });
+            count++;
 
         }
-    );
+
+        else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+
+    const noCameras = document.getElementById("noCameras");
+
+    if (noCameras) {
+
+        noCameras.textContent =
+            count === 0 ? "No cameras found." : "";
+
+    }
 
 }
 
 
-// View Camera
+// ===================================
+// 3. VIEW CAMERA FUNCTION
+// ===================================
 
-function viewCamera(cameraName) {
+function viewCamera(name) {
 
     alert(
-        "Opening " +
-        cameraName +
-        "...\n\n" +
-        "Live CCTV preview will be available " +
-        "in the future version."
+        name +
+        "\n\nCamera Details\nStatus: Demo Camera\nLive CCTV Streaming is not connected."
     );
 
 }
 
 
-// Contact Form
+// ===================================
+// 4. CONTACT FORM FUNCTION
+// ===================================
 
-const contactForm =
-    document.getElementById("contactForm");
+function submitContact(event) {
 
-if (contactForm) {
+    event.preventDefault();
 
-    contactForm.addEventListener(
-        "submit",
-        function(event) {
+    const message = document.getElementById("contactMessage");
 
-            event.preventDefault();
+    message.textContent =
+        "Thank you! Your message has been submitted successfully.";
 
-            alert(
-                "Thank you! " +
-                "Your message has been submitted."
-            );
+    message.style.color = "green";
 
-            contactForm.reset();
-
-        }
-    );
+    event.target.reset();
 
 }
 
 
-// Save Settings
+// ===================================
+// 5. SETTINGS SAVE FUNCTION
+// ===================================
 
 function saveSettings() {
 
-    const systemName =
-        document.getElementById(
-            "systemName"
-        ).value;
+    const adminName =
+        document.getElementById("adminName").value.trim();
 
-    const notifications =
-        document.getElementById(
-            "notifications"
-        ).checked;
+    const message =
+        document.getElementById("settingsMessage");
 
-    const darkMode =
-        document.getElementById(
-            "darkMode"
-        ).checked;
 
-    alert(
-        "Settings Saved!\n\n" +
-        "System: " +
-        systemName +
-        "\nNotifications: " +
-        (notifications ? "ON" : "OFF") +
-        "\nDark Mode: " +
-        (darkMode ? "ON" : "OFF")
-    );
+    if (adminName === "") {
+
+        message.textContent =
+            "Please enter Administrator Name.";
+
+        message.style.color = "red";
+
+    }
+
+    else {
+
+        message.textContent =
+            "Settings Saved Successfully!";
+
+        message.style.color = "green";
+
+    }
 
 }
 
 
-console.log(
-    "CCTVGuard Smart CCTV Monitoring System Loaded"
-);
+// ===================================
+// END OF CCTVGUARD JAVASCRIPT
+// ===================================

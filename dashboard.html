@@ -1,171 +1,180 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CCTVGuard - Dashboard</title>
+    <title>Dashboard | CCTVGuard</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<header>
-    <nav class="navbar">
+    <!-- Navigation -->
+    <header class="topbar">
 
-        <h2>CCTVGuard</h2>
+        <a href="dashboard.html" class="brand">
+            🛡 CCTVGuard
+        </a>
 
-        <div class="nav-links">
-            <a href="dashboard.html">Dashboard</a>
+        <nav>
+            <a href="dashboard.html" class="active">Dashboard</a>
             <a href="cameras.html">Cameras</a>
             <a href="alerts.html">Alerts</a>
             <a href="activity.html">Activity</a>
             <a href="settings.html">Settings</a>
             <a href="index.html">Logout</a>
+        </nav>
+
+    </header>
+
+    <main class="container">
+
+        <!-- Page Heading -->
+        <div class="page-heading">
+
+            <div>
+                <span class="eyebrow">OVERVIEW</span>
+                <h1>Dashboard</h1>
+                <p>Welcome to your CCTVGuard monitoring dashboard.</p>
+            </div>
+
+            <span class="live-pill">● System Active</span>
+
         </div>
 
-    </nav>
-</header>
+        <!-- Statistics -->
+        <section class="stats">
 
+            <div class="stat-card">
+                <span>Total Cameras</span>
+                <strong>04</strong>
+            </div>
 
-<main class="dashboard">
+            <div class="stat-card">
+                <span>Online Cameras</span>
+                <strong class="green">03</strong>
+            </div>
 
-    <h1>Security Dashboard</h1>
+            <div class="stat-card">
+                <span>Offline Cameras</span>
+                <strong class="red">01</strong>
+            </div>
 
-    <p>Welcome to CCTVGuard monitoring system.</p>
+        </section>
 
+        <!-- Monitoring Overview -->
+        <section class="dashboard-monitor">
 
-    <!-- Statistics -->
+            <div class="monitor-content">
 
-    <div class="stats-container">
+                <span class="eyebrow">SECURITY MONITORING</span>
 
-        <div class="stat-card">
-            <h3>Total Cameras</h3>
-            <h2>08</h2>
-        </div>
+                <h2>Monitoring Overview</h2>
 
+                <p>
+                    Manage your security cameras and review
+                    surveillance activities from one place.
+                </p>
 
-        <div class="stat-card online">
-            <h3>Online Cameras</h3>
-            <h2>06</h2>
-        </div>
+                <a href="cameras.html" class="btn">
+                    View All Cameras →
+                </a>
 
+            </div>
 
-        <div class="stat-card offline">
-            <h3>Offline Cameras</h3>
-            <h2>02</h2>
-        </div>
-
-
-        <div class="stat-card alert">
-            <h3>Active Alerts</h3>
-            <h2>03</h2>
-        </div>
-
-    </div>
-
-
-    <!-- Camera Overview -->
-
-    <h2>Camera Overview</h2>
-
-
-    <div class="camera-grid">
-
-
-        <!-- Camera 01 -->
-
-        <div class="camera-card">
-
-            <div class="camera-screen">
+            <div class="monitor-image">
 
                 <img
-                    src="images/camera1.jpg"
-                    alt="Camera 01"
+                    src="images/monitoring.jpg"
+                    alt="CCTV Monitoring Dashboard"
                 >
 
             </div>
 
-            <h3>Camera 01</h3>
+        </section>
 
-            <p class="online-text">
-                ● Online
-            </p>
+        <!-- Camera Overview -->
+        <section class="dashboard-section">
 
-        </div>
+            <div class="camera-heading">
+                <h2>Camera Overview</h2>
 
+                <a href="cameras.html" class="btn">
+                    View All
+                </a>
+            </div>
 
-        <!-- Camera 02 -->
+            <div class="grid three">
 
-        <div class="camera-card">
+                <article>
+                    <img src="images/camera1.jpg"
+                         alt="Main Gate Camera"
+                         class="dashboard-camera">
 
-            <div class="camera-screen">
+                    <h2>Camera 01</h2>
+                    <p>Main Gate</p>
+                    <span class="online">● Online</span>
+                </article>
 
-                <img
-                    src="images/camera2.jpg"
-                    alt="Camera 02"
-                >
+                <article>
+                    <img src="images/camera2.jpg"
+                         alt="Parking Camera"
+                         class="dashboard-camera">
+
+                    <h2>Camera 02</h2>
+                    <p>Parking Area</p>
+                    <span class="online">● Online</span>
+                </article>
+
+                <article>
+                    <img src="images/camera3.jpg"
+                         alt="Lobby Camera"
+                         class="dashboard-camera">
+
+                    <h2>Camera 03</h2>
+                    <p>Office Lobby</p>
+                    <span class="offline">● Offline</span>
+                </article>
 
             </div>
 
-            <h3>Camera 02</h3>
+        </section>
 
-            <p class="online-text">
-                ● Online
-            </p>
+        <!-- Recent Activity -->
+        <section class="dashboard-section">
 
-        </div>
+            <h2>Recent Activity</h2>
 
+            <div class="panel">
 
-        <!-- Camera 03 -->
+                <p>🟢 Camera 01 is online.</p>
+                <hr>
 
-        <div class="camera-card">
+                <p>🟢 Camera 02 is online.</p>
+                <hr>
 
-            <div class="camera-screen">
+                <p>🔴 Camera 03 is offline.</p>
 
-                <img
-                    src="images/camera3.jpg"
-                    alt="Camera 03"
-                >
+                <br>
 
-            </div>
-
-            <h3>Camera 03</h3>
-
-            <p class="offline-text">
-                ● Offline
-            </p>
-
-        </div>
-
-
-        <!-- Camera 04 -->
-
-        <div class="camera-card">
-
-            <div class="camera-screen">
-
-                <img
-                    src="images/camera4.jpg"
-                    alt="Camera 04"
-                >
+                <a href="activity.html" class="btn">
+                    View Activity
+                </a>
 
             </div>
 
-            <h3>Camera 04</h3>
+        </section>
 
-            <p class="online-text">
-                ● Online
-            </p>
+    </main>
 
-        </div>
+    <footer>
+        © 2026 CCTVGuard | Smart CCTV Monitoring System
+    </footer>
 
-
-    </div>
-
-</main>
+    <script src="js/script.js"></script>
 
 </body>
 </html>

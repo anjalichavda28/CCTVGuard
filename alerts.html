@@ -1,79 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>CCTVGuard - Alerts</title>
-
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-
-<header>
-    <nav class="navbar">
-
-        <h2>CCTVGuard</h2>
-
-        <div class="nav-links">
-            <a href="dashboard.html">Dashboard</a>
-            <a href="cameras.html">Cameras</a>
-            <a href="alerts.html">Alerts</a>
-            <a href="activity.html">Activity</a>
-            <a href="settings.html">Settings</a>
-        </div>
-
-    </nav>
-</header>
-
-<main class="page-container">
-
-    <h1>🚨 Security Alerts</h1>
-
-    <div class="alert-list">
-
-        <div class="alert-card danger">
-
-            <h3>Motion Detected</h3>
-
-            <p>
-                Motion detected near Entrance Camera.
-            </p>
-
-            <small>Today, 10:35 PM</small>
-
-        </div>
-
-        <div class="alert-card warning">
-
-            <h3>Camera Disconnected</h3>
-
-            <p>
-                Office Camera is currently offline.
-            </p>
-
-            <small>Today, 09:20 PM</small>
-
-        </div>
-
-        <div class="alert-card success">
-
-            <h3>Camera Connected</h3>
-
-            <p>
-                Parking Camera connection restored.
-            </p>
-
-            <small>Today, 08:45 PM</small>
-
-        </div>
-
-    </div>
-
-</main>
-
-</body>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Alerts | CCTVGuard</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="dashboard.html">🛡 CCTVGuard</a>
+      <nav>
+        <a href="dashboard.html">Dashboard</a><a href="cameras.html">Cameras</a
+        ><a href="alerts.html">Alerts</a><a href="activity.html">Activity</a
+        ><a href="settings.html">Settings</a><a href="index.html">Logout</a>
+      </nav>
+    </header>
+    <main>
+      <small>NOTIFICATIONS</small>
+      <h1>Security Alerts</h1>
+      <div class="panel">
+        <article>
+          ⚠️ <b>Motion detected near Main Gate</b>
+          <p>Camera 01 · Today, 10:35 AM · High priority</p>
+        </article>
+        <article>
+          🚶 <b>Unknown movement in Parking</b>
+          <p>Camera 02 · Today, 09:48 AM · Medium</p>
+        </article>
+        <article>
+          📡 <b>Camera 03 connection lost</b>
+          <p>Lobby · Today, 08:15 AM</p>
+        </article>
+      </div>
+    </main>
+    <footer>© 2026 CCTVGuard</footer>
+  </body>
 </html>

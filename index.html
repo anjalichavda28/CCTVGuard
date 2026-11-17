@@ -1,75 +1,110 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CCTVGuard - Home</title>
-<link rel="stylesheet" href="./style.css">
+
+    <title>Home | CCTVGuard</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<header>
-    <nav class="navbar">
-        <h2>CCTVGuard</h2>
+    <!-- Navigation -->
+    <header class="topbar">
 
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="login.html" class="nav-btn">Login</a>
-        </div>
-    </nav>
-</header>
+        <a href="index.html" class="brand">
+            🛡 CCTVGuard
+        </a>
 
-<section class="hero">
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="login.html">Login</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
 
-    <div class="hero-content">
-        <h1>Smart CCTV Monitoring System</h1>
+    </header>
 
-        <p>
-            Monitor your security cameras, check alerts
-            and manage your surveillance system from one place.
-        </p>
+    <!-- Hero Section -->
+    <section class="hero">
 
-        <a href="login.html" class="btn">Get Started</a>
-    </div>
+        <div class="hero-content">
 
-</section>
+            <span class="eyebrow">SMART SECURITY SOLUTION</span>
 
-<section class="features">
+            <h1>
+                Smart CCTV
+                <em>Monitoring</em>
+                System
+            </h1>
 
-    <h2>Our Features</h2>
+            <p>
+                Monitor your security cameras, manage alerts
+                and keep your surroundings safe with CCTVGuard.
+            </p>
 
-    <div class="feature-container">
+            <a href="login.html" class="btn">
+                Get Started →
+            </a>
 
-        <div class="feature-card">
-            <h3>📹 Camera Monitoring</h3>
-            <p>Monitor multiple CCTV cameras from one dashboard.</p>
-        </div>
-
-        <div class="feature-card">
-            <h3>🚨 Smart Alerts</h3>
-            <p>View motion detection and camera status alerts.</p>
         </div>
 
-        <div class="feature-card">
-            <h3>📊 Dashboard</h3>
-            <p>Get a quick overview of your security system.</p>
+        <!-- Security Room Image -->
+        <div class="hero-image">
+
+            <img
+                src="images/security-room.jpg"
+                alt="CCTV Security Monitoring Room"
+            >
+
         </div>
 
-        <div class="feature-card">
-            <h3>⚙️ Easy Management</h3>
-            <p>Manage system settings easily.</p>
+    </section>
+
+    <!-- Features Section -->
+    <main>
+
+        <h2>Our Features</h2>
+
+        <div class="grid three">
+
+            <article>
+                <h2>📹 Camera Monitoring</h2>
+                <p>
+                    View and manage registered CCTV cameras
+                    from one dashboard.
+                </p>
+            </article>
+
+            <article>
+                <h2>🚨 Security Alerts</h2>
+                <p>
+                    Check security alerts and review
+                    recorded incidents.
+                </p>
+            </article>
+
+            <article>
+                <h2>📊 Activity Tracking</h2>
+                <p>
+                    Monitor recent activities and
+                    security updates.
+                </p>
+            </article>
+
         </div>
 
-    </div>
+    </main>
 
-</section>
+    <!-- Footer -->
+    <footer>
+        © 2026 CCTVGuard | Smart CCTV Monitoring System
+    </footer>
 
-<footer>
-    <p>© 2026 CCTVGuard | Smart CCTV Monitoring System</p>
-</footer>
-<script src="script.js"></script>
+    <script src="js/script.js"></script>
+
 </body>
 </html>

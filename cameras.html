@@ -1,109 +1,181 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CCTVGuard - Cameras</title>
+    <title>CCTV Cameras | CCTVGuard</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<header>
-    <nav class="navbar">
+    <!-- Navigation Bar -->
+    <header class="topbar">
+        <a href="dashboard.html" class="brand">
+            🛡 CCTVGuard
+        </a>
 
-        <h2>CCTVGuard</h2>
-
-        <div class="nav-links">
+        <nav>
             <a href="dashboard.html">Dashboard</a>
-            <a href="cameras.html">Cameras</a>
+            <a href="cameras.html" class="active">Cameras</a>
             <a href="alerts.html">Alerts</a>
             <a href="activity.html">Activity</a>
             <a href="settings.html">Settings</a>
+            <a href="index.html">Logout</a>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main class="container">
+
+        <div class="page-heading">
+            <div>
+                <span class="eyebrow">SURVEILLANCE SYSTEM</span>
+                <h1>CCTV Cameras</h1>
+                <p>Monitor and manage all registered security cameras.</p>
+            </div>
+
+            <span class="live-pill">● System Active</span>
         </div>
 
-    </nav>
-</header>
+        <!-- Camera Statistics -->
+        <section class="stats">
 
-<main class="page-container">
+            <div class="stat-card">
+                <span>Total Cameras</span>
+                <strong>04</strong>
+            </div>
 
-    <h1>📹 CCTV Cameras</h1>
+            <div class="stat-card">
+                <span>Online Cameras</span>
+                <strong class="green">03</strong>
+            </div>
 
-    <p>Monitor all connected cameras.</p>
+            <div class="stat-card">
+                <span>Offline Cameras</span>
+                <strong class="red">01</strong>
+            </div>
 
-    <input
-        type="text"
-        id="cameraSearch"
-        class="search-box"
-        placeholder="Search camera..."
-    >
+        </section>
 
-    <div class="camera-grid" id="cameraList">
+        <!-- Search -->
+        <div class="camera-heading">
+            <h2>All Cameras</h2>
 
-        <div class="camera-card">
-            <div class="camera-screen">📹 Camera 01</div>
-
-            <h3>Entrance Camera</h3>
-
-            <p class="online-text">● Online</p>
-
-            <button
-                class="btn"
-                onclick="viewCamera('Entrance Camera')">
-                View Camera
-            </button>
+            <input
+                type="search"
+                id="cameraSearch"
+                class="search-box"
+                placeholder="Search cameras..."
+                oninput="filterCameras()"
+            >
         </div>
 
-        <div class="camera-card">
-            <div class="camera-screen">📹 Camera 02</div>
+        <!-- Camera Cards -->
+        <section class="camera-grid" id="cameraList">
 
-            <h3>Parking Camera</h3>
+            <!-- Camera 1 -->
+            <div class="camera-card searchable">
 
-            <p class="online-text">● Online</p>
+                <img
+                    src="images/camera1.jpg"
+                    alt="Main Gate CCTV Camera"
+                    class="camera-photo"
+                >
 
-            <button
-                class="btn"
-                onclick="viewCamera('Parking Camera')">
-                View Camera
-            </button>
-        </div>
+                <div class="camera-info">
+                    <h3>Camera 01</h3>
+                    <p>Main Gate</p>
 
-        <div class="camera-card">
-            <div class="camera-screen">📹 Camera 03</div>
+                    <span class="tag online">● Online</span>
 
-            <h3>Office Camera</h3>
+                    <button onclick="viewCamera('Camera 01 - Main Gate')">
+                        View Details
+                    </button>
+                </div>
 
-            <p class="offline-text">● Offline</p>
+            </div>
 
-            <button
-                class="btn"
-                onclick="viewCamera('Office Camera')">
-                View Camera
-            </button>
-        </div>
+            <!-- Camera 2 -->
+            <div class="camera-card searchable">
 
-        <div class="camera-card">
-            <div class="camera-screen">📹 Camera 04</div>
+                <img
+                    src="images/camera2.jpg"
+                    alt="Parking CCTV Camera"
+                    class="camera-photo"
+                >
 
-            <h3>Reception Camera</h3>
+                <div class="camera-info">
+                    <h3>Camera 02</h3>
+                    <p>Parking Area</p>
 
-            <p class="online-text">● Online</p>
+                    <span class="tag online">● Online</span>
 
-            <button
-                class="btn"
-                onclick="viewCamera('Reception Camera')">
-                View Camera
-            </button>
-        </div>
+                    <button onclick="viewCamera('Camera 02 - Parking Area')">
+                        View Details
+                    </button>
+                </div>
 
-    </div>
+            </div>
 
-</main>
+            <!-- Camera 3 -->
+            <div class="camera-card searchable">
 
-<script src="js/script.js"></script>
+                <img
+                    src="images/camera3.jpg"
+                    alt="Lobby CCTV Camera"
+                    class="camera-photo"
+                >
+
+                <div class="camera-info">
+                    <h3>Camera 03</h3>
+                    <p>Office Lobby</p>
+
+                    <span class="tag offline">● Offline</span>
+
+                    <button onclick="viewCamera('Camera 03 - Office Lobby')">
+                        View Details
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Camera 4 -->
+            <div class="camera-card searchable">
+
+                <img
+                    src="images/camera4.jpg"
+                    alt="Corridor CCTV Camera"
+                    class="camera-photo"
+                >
+
+                <div class="camera-info">
+                    <h3>Camera 04</h3>
+                    <p>Office Corridor</p>
+
+                    <span class="tag online">● Online</span>
+
+                    <button onclick="viewCamera('Camera 04 - Office Corridor')">
+                        View Details
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <p id="noCameras" class="muted"></p>
+
+    </main>
+
+    <footer>
+        © 2026 CCTVGuard | Smart CCTV Monitoring System
+    </footer>
+
+    <script src="js/script.js"></script>
 
 </body>
 </html>

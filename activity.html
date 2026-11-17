@@ -1,79 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>CCTVGuard - Activity</title>
-
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-
-<header>
-    <nav class="navbar">
-
-        <h2>CCTVGuard</h2>
-
-        <div class="nav-links">
-            <a href="dashboard.html">Dashboard</a>
-            <a href="cameras.html">Cameras</a>
-            <a href="alerts.html">Alerts</a>
-            <a href="activity.html">Activity</a>
-            <a href="settings.html">Settings</a>
-        </div>
-
-    </nav>
-</header>
-
-<main class="page-container">
-
-    <h1>📋 Recent Activity</h1>
-
-    <table>
-
-        <thead>
-
-            <tr>
-                <th>Time</th>
-                <th>Camera</th>
-                <th>Activity</th>
-                <th>Status</th>
-            </tr>
-
-        </thead>
-
-        <tbody>
-
-            <tr>
-                <td>10:35 PM</td>
-                <td>Entrance Camera</td>
-                <td>Motion Detected</td>
-                <td>Alert</td>
-            </tr>
-
-            <tr>
-                <td>09:20 PM</td>
-                <td>Office Camera</td>
-                <td>Disconnected</td>
-                <td>Warning</td>
-            </tr>
-
-            <tr>
-                <td>08:45 PM</td>
-                <td>Parking Camera</td>
-                <td>Connected</td>
-                <td>Normal</td>
-            </tr>
-
-        </tbody>
-
-    </table>
-
-</main>
-
-</body>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Activity | CCTVGuard</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="dashboard.html">🛡 CCTVGuard</a>
+      <nav>
+        <a href="dashboard.html">Dashboard</a><a href="cameras.html">Cameras</a
+        ><a href="alerts.html">Alerts</a><a href="activity.html">Activity</a
+        ><a href="settings.html">Settings</a><a href="index.html">Logout</a>
+      </nav>
+    </header>
+    <main>
+      <small>SYSTEM LOG</small>
+      <h1>Recent Activity</h1>
+      <div class="panel">
+        <p>● Motion detected near Main Gate — Today, 10:35 AM · Camera 01</p>
+        <p>● Camera 02 connection restored — Today, 09:20 AM</p>
+        <p>● Camera 03 went offline — Today, 08:15 AM</p>
+        <p>● Administrator logged in — Yesterday, 06:30 PM</p>
+      </div>
+    </main>
+    <footer>© 2026 CCTVGuard</footer>
+  </body>
 </html>
